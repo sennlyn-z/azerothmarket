@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "status_model": ["confirmed", "partial", "pending"],
+  "equipment": [],
+  "record_schema": {
+    "id": "stable equipment entity id",
+    "name": "display name",
+    "slot": "head | neck | shoulder | back | chest | wrist | hands | waist | legs | feet | finger | trinket | main_hand | off_hand | two_hand | ranged | unknown",
+    "armor_type": "cloth | leather | mail | plate | shield | none | unknown",
+    "weapon_type": "axe | bow | crossbow | dagger | fist | gun | mace | polearm | staff | sword | wand | unknown",
+    "item_ids": [],
+    "source_type": "dungeon | raid | quest | profession | world_drop | pvp | vendor | unknown",
+    "source_entity_ids": [],
+    "profession_id": null,
+    "recipe_id": null,
+    "status": "confirmed | partial | pending",
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "Equipment is an item-facing entity layer; item records remain the source of truth for stats and exact item properties.",
+    "Do not invent Forever stat lines, item levels, class restrictions, or weapon/armor details.",
+    "Use stable IDs so equipment can later connect to item pages, profession recipes, dungeon loot, guides, and market records.",
+    "When a Forever item has multiple versions, represent the shared equipment identity separately from individual item records."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "scope": "world-of-warcraft-forever",
+  "status": "schema-seed",
+  "recipes": [],
+  "recipe_schema": {
+    "required": ["id","name","profession_id","status"],
+    "optional": ["skill_required","item_id","materials","source","camp_object","bind_type","quality","notes","source_ids"],
+    "status_values": ["confirmed","partial","pending"]
+  },
+  "rules": [
+    "Do not populate recipe records from Classic-era data unless Forever specifically confirms that recipe is unchanged.",
+    "Every confirmed recipe should have a source reference.",
+    "Materials should become separate item/material entities when enough authoritative data exists.",
+    "Camp objects are recipes/entities and should link back to their profession and camping system."
+  ]
+}

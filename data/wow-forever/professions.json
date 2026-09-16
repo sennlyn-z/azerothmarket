@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "scope": "world-of-warcraft-forever",
+  "status": "initial-authoritative-seed",
+  "source_ids": ["blizzard-forever-deep-dive"],
+  "professions": [
+    {
+      "id": "alchemy",
+      "name": "Alchemy",
+      "category": "crafting",
+      "status": "confirmed",
+      "forever_features": [
+        {"id":"alchemy-lab","name":"Alchemy Lab","type":"camp-object","learned_at_skill":20,"status":"confirmed"}
+      ],
+      "recipe_scope": {"new_recipe_count": "part_of_600_plus_total","status":"confirmed"},
+      "relationships": {"uses":["herbalism"],"supports":["camping","gold","market"]}
+    },
+    {
+      "id": "blacksmithing",
+      "name": "Blacksmithing",
+      "category": "crafting",
+      "status": "confirmed",
+      "forever_features": [
+        {"id":"sharpening-wheel","name":"Sharpening Wheel","type":"camp-object","learned_at_skill":20,"effect":"increases Attack Power","status":"confirmed"}
+      ],
+      "advanced_recipe_source": "specific dungeon boss blueprints",
+      "relationships": {"uses":["mining"],"supports":["equipment","camping","gold","market"]}
+    },
+    {
+      "id": "enchanting",
+      "name": "Enchanting",
+      "category": "crafting",
+      "status": "confirmed",
+      "forever_features": [],
+      "recipe_scope": {"new_recipe_count": "part_of_600_plus_total","status":"confirmed"},
+      "relationships": {"uses":["items","equipment"],"supports":["equipment","gold","market"]}
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering",
+      "category": "crafting",
+      "status": "confirmed",
+      "forever_features": [],
+      "recipe_scope": {"new_recipe_count": "part_of_600_plus_total","status":"confirmed"},
+      "relationships": {"uses":["mining"],"supports":["items","equipment","camping","gold","market"]}
+    },
+    {
+      "id": "herbalism",
+      "name": "Herbalism",
+      "category": "gathering",
+      "status": "confirmed",
+      "forever_features": [
+        {"id":"incense-candle","name":"Incense Candle","type":"camp-object","learned_at_skill":20,"effect":"increases Intellect","status":"confirmed"}
+      ],
+      "legacy_interaction": "Bountiful Harvest increases materials gathered from mining, herbalism, or skinning.",
+      "relationships": {"supplies":["alchemy"],"supports":["camping","gold","market"]}
+    },
+    {
+      "id": "leatherworking",
+      "name": "Leatherworking",
+      "category": "crafting",
+      "status": "confirmed",
+      "forever_features": [
+        {"id":"tanning-rack","name":"Tanning Rack","type":"camp-object","learned_at_skill":20,"effect":"required for more advanced Leatherworking recipes","status":"confirmed"}
+      ],
+      "advanced_recipe_source": "specific dungeon boss blueprints",
+      "relationships": {"uses":["skinning"],"supports":["equipment","camping","gold","market"]}
+    },
+    {
+      "id": "mining",
+      "name": "Mining",
+      "category": "gathering",
+      "status": "confirmed",
+      "forever_features": [],
+      "legacy_interaction": "Bountiful Harvest increases materials gathered from mining, herbalism, or skinning.",
+      "relationships": {"supplies":["blacksmithing","engineering"],"supports":["gold","market"]}
+    },
+    {
+      "id": "skinning",
+      "name": "Skinning",
+      "category": "gathering",
+      "status": "confirmed",
+      "forever_features": [],
+      "legacy_interaction": "Bountiful Harvest increases materials gathered from mining, herbalism, or skinning.",
+      "relationships": {"supplies":["leatherworking"],"supports":["gold","market"]}
+    },
+    {
+      "id": "tailoring",
+      "name": "Tailoring",
+      "category": "crafting",
+      "status": "confirmed",
+      "forever_features": [
+        {"id":"faction-banner","name":"Faction Banner","type":"camp-object","learned_at_skill":20,"effect":"increases Spirit","status":"confirmed"}
+      ],
+      "advanced_recipe_source": "specific dungeon boss blueprints",
+      "relationships": {"uses":["items"],"supports":["equipment","camping","gold","market"]}
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking",
+      "category": "secondary",
+      "status": "confirmed",
+      "forever_features": [
+        {"id":"upgraded-campfire","name":"Upgraded Campfire","type":"camp-object","status":"confirmed","effect":"allows five or ten objects to be placed at a camp"}
+      ],
+      "food_changes": "Crafted food receives updates and can provide a small experience bonus and stat boosts.",
+      "relationships": {"supports":["camping","gold","market"]}
+    }
+  ],
+  "global_profession_rules": {
+    "new_recipes": {"count":"over 600","status":"confirmed"},
+    "camp_objects_per_profession": 3,
+    "camp_object_first_unlock_skill": 20,
+    "advanced_objects": "Blueprint recipes can drop from specific dungeon bosses",
+    "camp_object_cooldown": "one hour",
+    "basic_campfire_object_limit": 3,
+    "source_ids": ["blizzard-forever-deep-dive"]
+  },
+  "data_gaps": [
+    "Full recipe list",
+    "Recipe IDs",
+    "Recipe materials and quantities",
+    "Profession trainer locations",
+    "Complete campsite object lists for every profession",
+    "Specific dungeon boss to blueprint mapping",
+    "Detailed gathering node and material database"
+  ]
+}

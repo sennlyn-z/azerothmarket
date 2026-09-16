@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "status_model": ["confirmed", "partial", "pending"],
+  "dungeons": [
+    {
+      "id": "hall-of-thanes",
+      "name": "Hall of Thanes",
+      "status": "confirmed",
+      "summary": "A new dungeon beneath Ironforge.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "ruins-of-lordaeron",
+      "name": "Ruins of Lordaeron",
+      "status": "confirmed",
+      "summary": "A new dungeon centered on the Ruins of Lordaeron.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "whelgars-excavation",
+      "name": "Whelgar's Excavation",
+      "status": "confirmed",
+      "summary": "A new dungeon at an excavation site above Whelgar's Excavation.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "city-of-dalaran",
+      "name": "City of Dalaran",
+      "status": "confirmed",
+      "summary": "A new dungeon involving magical trouble in Dalaran.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "blackmaw-hold",
+      "name": "Blackmaw Hold",
+      "status": "confirmed",
+      "summary": "A new dungeon involving corruption stirring in its depths.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "drowned-city",
+      "name": "Drowned City",
+      "status": "confirmed",
+      "summary": "A new dungeon associated with naga and pirates.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "kroldok-stronghold",
+      "name": "Krol'dok Stronghold",
+      "status": "confirmed",
+      "summary": "A new dungeon destination in World of Warcraft: Forever.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "alcaz-prison",
+      "name": "Alcaz Prison",
+      "status": "confirmed",
+      "summary": "A new dungeon destination in World of Warcraft: Forever.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    },
+    {
+      "id": "shapers-terrace",
+      "name": "Shaper's Terrace",
+      "status": "confirmed",
+      "summary": "A new dungeon destination in World of Warcraft: Forever.",
+      "bosses": [],
+      "source_ids": ["blizzard-forever-whats-next"]
+    }
+  ],
+  "data_rules": {
+    "bosses": "Populate only from authoritative or clearly attributed research; do not invent boss names.",
+    "loot": "Record confirmed loot only and keep source references per item or boss relationship.",
+    "blueprints": "Track dungeon-boss Blueprint drops separately from ordinary loot when confirmed.",
+    "recipes": "Link confirmed Blueprint rewards to recipes and professions using stable entity IDs.",
+    "mechanics": "Do not infer encounter mechanics from similarly named Classic content."
+  }
+}

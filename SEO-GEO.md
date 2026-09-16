@@ -29,6 +29,14 @@ Use contextual links to create a graph:
 
 Link to the most specific useful page rather than repeatedly linking only to hubs.
 
+## Multilingual SEO
+- The current global selector provides client-side Russian, German, French, Spanish, and Portuguese translation for all HTML pages.
+- Client-side translation is primarily a user-experience compatibility layer; it should not be treated as the final SEO localization strategy.
+- For high-value pages, create source-authored localized HTML URLs and connect each language equivalent with `rel="alternate" hreflang="..."` annotations.
+- Each localized URL should have its own self-referencing canonical URL and language-appropriate title, meta description, H1, and primary content.
+- Do not create language URLs that contain only translated navigation while leaving the main content in English.
+- Keep entity IDs, source references, data relationships, and canonical game terminology stable across languages.
+
 ## GEO / AI readability
 - Put the direct answer early.
 - Use short factual sections and clear labels.
@@ -46,3 +54,4 @@ Add JSON-LD only when the schema accurately represents the page. Keep structured
 - Avoid thin placeholder pages.
 - Avoid duplicate titles/descriptions across entity pages.
 - Deep entity URLs should be stable and descriptive.
+- When localized URLs are introduced, include their language variants in sitemap strategy and keep alternate/canonical relationships consistent.

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "quests": [],
+  "record_schema": {
+    "id": "stable quest id",
+    "name": "display name",
+    "zone_id": null,
+    "level": null,
+    "quest_type": "normal | dungeon | raid | profession | legacy | class | race | pvp | unknown",
+    "faction": "alliance | horde | neutral | unknown",
+    "giver_npc_id": null,
+    "reward_item_ids": [],
+    "reward_currency_ids": [],
+    "status": "confirmed | partial | pending",
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "Forever quest records must be researched as Forever content and must not silently inherit Classic quest rewards or coordinates.",
+    "Blizzard confirms more than 150 new quests in Riverglades and additional quests throughout the level 1-60 journey; exact quest records require individual source support.",
+    "Do not invent quest IDs, objectives, rewards, NPC locations, or level requirements."
+  ]
+}

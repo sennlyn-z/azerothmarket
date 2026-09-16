@@ -3,7 +3,7 @@
 _Last updated: 2026-09-16_
 
 ## Current state
-The site shell and World of Warcraft: Forever hub architecture are established. Production is deployed through GitHub → Cloudflare Workers. The structured WoW Forever content database is now in place as a scalable entity/relationship layer.
+The site shell and World of Warcraft: Forever hub architecture are established. Production is deployed through GitHub → Cloudflare Workers. The structured WoW Forever content database is now in place as a scalable entity/relationship layer. A global multilingual shell is also in place for English, Russian, German, French, Spanish, and Portuguese.
 
 ## Completed
 - Established `1240px` global layout standard.
@@ -28,6 +28,10 @@ The site shell and World of Warcraft: Forever hub architecture are established. 
 - Added `quests.json`, `npcs.json`, and `currencies.json` as the next population-ready entity layers.
 - Built crawlable entity pages for all nine confirmed launch dungeons and both announced raids under the Dungeons & Raids hierarchy.
 - Upgraded the Dungeons & Raids hub from a placeholder to a real index of the nine dungeons and two raids.
+- Added a global multilingual selector for English, Russian, German, French, Spanish, and Portuguese.
+- Added automatic browser-language detection and saved language preference.
+- Added Cloudflare Worker-first HTML injection so the language selector is available across existing and future HTML pages without duplicating page templates.
+- Added multilingual SEO rules for the future rollout of source-authored localized URLs and `hreflang` annotations.
 
 ## Current documentation source of truth
 - `PROJECT-CONTEXT.md` — durable project overview and continuation rules.
@@ -71,9 +75,10 @@ Blizzard confirms more than 600 new recipes, three campsite objects per professi
 3. Build the first data-driven entity page template, starting with Dungeons & Raids and Professions.
 4. Connect entity cards and detail pages through the central content index.
 5. Add structured data and canonical metadata to entity pages.
-6. Generate/update sitemap entries as crawlable entity routes are introduced.
-7. Consolidate shared shell CSS only after verifying all existing pages remain visually identical.
-8. Audit the complete site for header, width, responsive, navigation, internal-link, and SEO consistency.
+6. Begin source-authored localized HTML versions for the highest-value pages, starting with the homepage, WoW Forever hub, About Us, Dungeons & Raids hub, and Professions hub; connect equivalents with `hreflang`.
+7. Generate/update sitemap entries as crawlable entity and localized routes are introduced.
+8. Consolidate shared shell CSS only after verifying all existing pages remain visually identical.
+9. Audit the complete site for header, width, responsive, navigation, internal-link, language, and SEO consistency.
 
 ## Important constraint
 Do not redesign the site merely because a new page is being added. New work should extend the existing system unless a deliberate site-wide design change is requested. Do not invent missing game data; use explicit data-status fields and source references instead.

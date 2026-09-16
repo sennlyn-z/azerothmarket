@@ -1,2 +1,34 @@
-/* Reserved for shared site styles. The current homepage is self-contained so it can render immediately. */
-:root{color-scheme:dark}
+/* AzerothMarket — canonical site design system.
+   New pages should use this shared shell and these tokens first. */
+:root{
+  --site:1240px;
+  --bg:#07090d;
+  --panel:#0d1118;
+  --line:#202733;
+  --text:#f3f6fa;
+  --muted:#9aa4b2;
+  --accent:#8ff0c0;
+}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+.w,.wrap{width:100%;max-width:var(--site);margin:0 auto;padding:0 28px}
+.site-header{border-bottom:1px solid var(--line);background:#090c12}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:flex-start}
+.brand{position:relative;display:inline-flex;align-items:center;flex:0 0 auto;padding-left:13px;color:var(--text);font-size:15px;font-weight:950;line-height:1;letter-spacing:.095em;transition:color .18s ease,letter-spacing .18s ease,transform .18s ease}
+.brand:before{content:"";position:absolute;left:0;width:3px;height:18px;border-radius:2px;background:var(--accent);transform:skewX(-18deg);box-shadow:0 0 0 rgba(143,240,192,0);transition:box-shadow .18s ease,height .18s ease}
+.brand:hover{color:var(--accent);letter-spacing:.12em;transform:translateY(-1px)}
+.brand:hover:before{height:20px;box-shadow:0 0 12px var(--accent)}
+.brand:active{color:var(--accent);transform:translateY(0) scale(.98)}
+.brand:active:before{box-shadow:0 0 16px var(--accent)}
+.links,.navlinks{margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:16px}
+.links a,.navlinks a{font:400 14px/1 system-ui,-apple-system,"Segoe UI",sans-serif;color:#b8c2ce;white-space:nowrap}
+.links a:hover,.navlinks a:hover{color:var(--accent)}
+.chat{flex:0 0 auto;margin-left:16px;display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border:1px solid #365d4d;background:#0b1511;border-radius:999px;color:#dffbed;font:800 14px/1 system-ui,-apple-system,"Segoe UI",sans-serif;white-space:nowrap}
+.chat:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.chat:hover{color:#dffbed}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.footer{padding:34px 0 60px;border-top:1px solid var(--line);color:#778291;font-size:13px}
+@media(max-width:900px){.links a:not(.chat),.navlinks a:not(.chat){display:none}}
+@media(max-width:560px){.w,.wrap{padding:0 18px}}

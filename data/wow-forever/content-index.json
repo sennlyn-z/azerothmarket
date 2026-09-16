@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "purpose": "Central relationship index for crawlable AzerothMarket content entities.",
+  "status_model": ["confirmed", "partial", "pending"],
+  "entity_types": [
+    "game",
+    "race",
+    "system",
+    "profession",
+    "dungeon",
+    "boss",
+    "raid",
+    "battleground",
+    "blueprint",
+    "recipe",
+    "item",
+    "equipment",
+    "quest",
+    "zone",
+    "currency"
+  ],
+  "relationship_types": [
+    "HAS_SYSTEM",
+    "HAS_PROFESSION",
+    "HAS_DUNGEON",
+    "HAS_RAID",
+    "HAS_BATTLEGROUND",
+    "HAS_BOSS",
+    "LOCATED_IN",
+    "DROPS_ITEM",
+    "DROPS_BLUEPRINT",
+    "UNLOCKS_RECIPE",
+    "USES_RECIPE",
+    "CREATES_ITEM",
+    "UPGRADES_TO",
+    "REWARD_FROM",
+    "AVAILABLE_IN",
+    "REQUIRES_PROFESSION"
+  ],
+  "routes": {
+    "dungeon": "/games/world-of-warcraft/forever/dungeons-raids/",
+    "profession": "/games/world-of-warcraft/forever/professions/",
+    "recipe": "/games/world-of-warcraft/forever/professions/",
+    "item": "/games/world-of-warcraft/forever/items/",
+    "equipment": "/games/world-of-warcraft/forever/equipment/",
+    "market": "/games/world-of-warcraft/forever/market/",
+    "guide": "/games/world-of-warcraft/forever/guides/"
+  },
+  "implementation_rules": [
+    "Every published entity must have a stable id and status.",
+    "Every confirmed factual relationship must carry source_ids.",
+    "Do not publish an empty or speculative Boss/Loot/Blueprint record as confirmed content.",
+    "Unknown values remain null, empty, or pending rather than being inferred.",
+    "Entity pages should link outward to related entities so the database becomes a navigable graph."
+  ],
+  "current_verified_scope": {
+    "dungeons": 9,
+    "raids": 2,
+    "battlegrounds": 1,
+    "professions": 10,
+    "confirmed_forever_profession_facts": [
+      "more than 600 new recipes",
+      "three campsite objects per profession",
+      "first campsite objects at profession skill 20",
+      "advanced campsite objects from Blueprint recipes dropped by specific dungeon bosses",
+      "one-hour shared campsite-object cooldown"
+    ],
+    "boss_loot_blueprint_mapping": "pending_research"
+  }
+}

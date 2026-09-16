@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "loot": [],
+  "record_schema": {
+    "id": "stable loot relationship id",
+    "source_entity_id": "boss, dungeon, raid, quest, creature, or other source entity",
+    "item_id": "item entity id",
+    "loot_type": "boss_drop | dungeon_drop | raid_drop | quest_reward | world_drop | rare_creature_drop | other",
+    "status": "confirmed | partial | pending",
+    "drop_rate": null,
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "Loot relationships are separate from item entities so one item can have multiple documented sources.",
+    "Never infer drop rates from Classic or similarly named encounters.",
+    "A loot relationship is only confirmed when the source supports the specific source-to-item relationship.",
+    "Keep unknown drop rates as null rather than estimating them."
+  ]
+}

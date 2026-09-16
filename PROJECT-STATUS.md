@@ -20,6 +20,9 @@ The site shell and World of Warcraft: Forever hub architecture are established. 
 - Added `data/wow-forever/entities.json` with the initial Forever entity registry and relationships.
 - Added `data/wow-forever/sources.json` with authoritative source references.
 - Added `data/wow-forever/README.md` with database rules and expansion strategy.
+- Added `professions.json` and the recipe schema seed.
+- Added `dungeons.json`, `bosses.json`, and `blueprints.json` as the Dungeon → Boss → Blueprint relationship layer.
+- Added `content-index.json` as the central relationship/index contract for future crawlable entity pages.
 
 ## Current documentation source of truth
 - `PROJECT-CONTEXT.md` — durable project overview and continuation rules.
@@ -32,6 +35,7 @@ The site shell and World of Warcraft: Forever hub architecture are established. 
 - `data/wow-forever/README.md` — database-specific rules.
 - `data/wow-forever/entities.json` — initial canonical Forever entity seed.
 - `data/wow-forever/sources.json` — database source registry.
+- `data/wow-forever/content-index.json` — entity relationship/index contract.
 
 ## Current database scope
 The first seed covers the major announced Forever structure:
@@ -41,19 +45,25 @@ The first seed covers the major announced Forever structure:
 - nine launch dungeons
 - two launch raids
 - Darkspear Islands battleground
-- initial profession registry
-- entity relationships back to the Forever hub
+- initial profession registry and profession-specific campsite facts
+- recipe schema and profession relationships
+- dungeon/boss/Blueprint schema
+- central content relationship index
+
+Blizzard confirms more than 600 new recipes, three campsite objects per profession, first campsite objects at profession skill 20, and advanced campsite objects coming from Blueprint recipes dropped by specific dungeon bosses. The individual Boss → Blueprint mappings still require source-backed research and are intentionally not fabricated.
 
 Detailed items, equipment, recipes, bosses, loot, quests, NPCs, zones, and market entities remain to be populated from authoritative data as it becomes available.
 
 ## Next priorities
-1. Consolidate the canonical shell CSS into `styles.css` without changing the established visual result.
-2. Audit remaining pages for header/logo/width consistency.
-3. Build database-driven entity datasets for professions, dungeons, raids, items, equipment, recipes, bosses, loot, quests, zones, and currencies.
+1. Research and populate confirmed Forever dungeon Boss entities from authoritative sources.
+2. Build verified Boss → Loot → Blueprint → Recipe relationships; leave unknown fields explicitly pending.
+3. Expand item/equipment schemas and stable entity IDs.
 4. Convert the most useful database entities into crawlable entity pages with stable URLs.
-5. Strengthen Forever hub cross-linking and entity relationships.
-6. Add structured data where it accurately represents each page/entity.
-7. Keep sitemap and internal links synchronized as the database grows.
+5. Connect entity pages to the Forever hub, professions, items, equipment, guides, and market sections.
+6. Consolidate the canonical shell CSS into `styles.css` without changing the established visual result.
+7. Audit remaining pages for header/logo/width consistency.
+8. Add structured data where it accurately represents each page/entity.
+9. Keep sitemap and internal links synchronized as the database grows.
 
 ## Important constraint
 Do not redesign the site merely because a new page is being added. New work should extend the existing system unless a deliberate site-wide design change is requested. Do not invent missing game data; use explicit data-status fields and source references instead.

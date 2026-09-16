@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "bosses": [],
+  "relationships": [],
+  "record_schema": {
+    "id": "stable boss id",
+    "name": "boss name",
+    "dungeon_id": "parent dungeon id",
+    "status": "confirmed | partial | pending",
+    "encounter_type": "boss | optional-boss | final-boss",
+    "loot_item_ids": [],
+    "blueprint_ids": [],
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "relationship_types": [
+    "DROPS_ITEM",
+    "DROPS_BLUEPRINT",
+    "LOCATED_IN",
+    "UNLOCKS_RECIPE"
+  ],
+  "data_rules": [
+    "Do not invent boss names, encounter order, loot tables, or drop rates.",
+    "A Blueprint must be represented as its own entity before linking it to a boss.",
+    "Use source_ids on every confirmed boss or loot relationship.",
+    "Drop rates remain unknown unless an authoritative source publishes them."
+  ]
+}

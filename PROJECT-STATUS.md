@@ -26,6 +26,8 @@ The site shell and World of Warcraft: Forever hub architecture are established. 
 - Added `content-index.json` as the central relationship/index contract for future crawlable entity pages.
 - Added `zones.json` with four source-backed Forever zone seeds: Zephras Isle, Riverglades, Mount Hyjal, and Shen'dralas.
 - Added `quests.json`, `npcs.json`, and `currencies.json` as the next population-ready entity layers.
+- Built crawlable entity pages for all nine confirmed launch dungeons and both announced raids under the Dungeons & Raids hierarchy.
+- Upgraded the Dungeons & Raids hub from a placeholder to a real index of the nine dungeons and two raids.
 
 ## Current documentation source of truth
 - `PROJECT-CONTEXT.md` — durable project overview and continuation rules.
@@ -54,7 +56,7 @@ The database now has schema coverage for the core content graph:
 - items and equipment
 - zones, quests, NPCs, and currencies
 
-Blizzard currently confirms more than 600 new recipes, three campsite objects per profession, first campsite objects at profession skill 20, and advanced campsite objects coming from Blueprint recipes dropped by specific dungeon bosses. Blizzard also confirms four useful zone-level seeds now tracked in the database: Zephras Isle, Riverglades, Mount Hyjal, and Shen'dralas. citeturn1search0turn1search1
+Blizzard confirms more than 600 new recipes, three campsite objects per profession, first campsite objects at profession skill 20, and advanced campsite objects coming from Blueprint recipes dropped by specific dungeon bosses. Blizzard also confirms Zephras Isle, Riverglades, Mount Hyjal, and Shen'dralas as Forever locations now tracked in the database.
 
 ## Data integrity rules
 - Forever data is treated as its own dataset; Classic data is not silently copied into it.

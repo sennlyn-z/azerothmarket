@@ -1,42 +1,17 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "game_version": "wow-forever",
   "purpose": "Central relationship index for crawlable AzerothMarket content entities.",
   "status_model": ["confirmed", "partial", "pending"],
   "entity_types": [
-    "game",
-    "race",
-    "system",
-    "profession",
-    "dungeon",
-    "boss",
-    "raid",
-    "battleground",
-    "blueprint",
-    "recipe",
-    "item",
-    "equipment",
-    "quest",
-    "zone",
-    "currency"
+    "game", "race", "system", "profession", "dungeon", "boss", "raid", "battleground",
+    "blueprint", "recipe", "item", "equipment", "quest", "zone", "currency", "npc", "creature"
   ],
   "relationship_types": [
-    "HAS_SYSTEM",
-    "HAS_PROFESSION",
-    "HAS_DUNGEON",
-    "HAS_RAID",
-    "HAS_BATTLEGROUND",
-    "HAS_BOSS",
-    "LOCATED_IN",
-    "DROPS_ITEM",
-    "DROPS_BLUEPRINT",
-    "UNLOCKS_RECIPE",
-    "USES_RECIPE",
-    "CREATES_ITEM",
-    "UPGRADES_TO",
-    "REWARD_FROM",
-    "AVAILABLE_IN",
-    "REQUIRES_PROFESSION"
+    "HAS_SYSTEM", "HAS_PROFESSION", "HAS_DUNGEON", "HAS_RAID", "HAS_BATTLEGROUND", "HAS_BOSS",
+    "LOCATED_IN", "DROPS_ITEM", "DROPS_BLUEPRINT", "UNLOCKS_RECIPE", "USES_RECIPE", "CREATES_ITEM",
+    "UPGRADES_TO", "REWARD_FROM", "AVAILABLE_IN", "REQUIRES_PROFESSION", "GIVEN_BY", "SERVICES",
+    "FOUND_IN", "USES_CURRENCY"
   ],
   "routes": {
     "dungeon": "/games/world-of-warcraft/forever/dungeons-raids/",
@@ -44,6 +19,8 @@
     "recipe": "/games/world-of-warcraft/forever/professions/",
     "item": "/games/world-of-warcraft/forever/items/",
     "equipment": "/games/world-of-warcraft/forever/equipment/",
+    "zone": "/games/world-of-warcraft/forever/guides/",
+    "quest": "/games/world-of-warcraft/forever/guides/",
     "market": "/games/world-of-warcraft/forever/market/",
     "guide": "/games/world-of-warcraft/forever/guides/"
   },
@@ -52,13 +29,15 @@
     "Every confirmed factual relationship must carry source_ids.",
     "Do not publish an empty or speculative Boss/Loot/Blueprint record as confirmed content.",
     "Unknown values remain null, empty, or pending rather than being inferred.",
-    "Entity pages should link outward to related entities so the database becomes a navigable graph."
+    "Entity pages should link outward to related entities so the database becomes a navigable graph.",
+    "Zones, quests, NPCs, and currencies may be indexed before dedicated page templates exist; their canonical destination should remain stable."
   ],
   "current_verified_scope": {
     "dungeons": 9,
     "raids": 2,
     "battlegrounds": 1,
     "professions": 10,
+    "zones": 4,
     "confirmed_forever_profession_facts": [
       "more than 600 new recipes",
       "three campsite objects per profession",
@@ -66,6 +45,9 @@
       "advanced campsite objects from Blueprint recipes dropped by specific dungeon bosses",
       "one-hour shared campsite-object cooldown"
     ],
-    "boss_loot_blueprint_mapping": "pending_research"
+    "boss_loot_blueprint_mapping": "pending_research",
+    "quest_database": "schema_ready_population_pending",
+    "npc_database": "schema_ready_population_pending",
+    "currency_database": "schema_ready_population_pending"
   }
 }

@@ -3,7 +3,7 @@
 _Last updated: 2026-09-16_
 
 ## Current state
-The site shell and World of Warcraft: Forever hub architecture are established. Production is deployed through GitHub → Cloudflare Workers. The first structured WoW Forever content database seed is now in the repository.
+The site shell and World of Warcraft: Forever hub architecture are established. Production is deployed through GitHub → Cloudflare Workers. The structured WoW Forever content database is now in place as a scalable entity/relationship layer.
 
 ## Completed
 - Established `1240px` global layout standard.
@@ -17,12 +17,15 @@ The site shell and World of Warcraft: Forever hub architecture are established. 
 - Added `PAGE-TEMPLATE.md` as the canonical page implementation reference.
 - Added permanent project-context documentation.
 - Created `data/wow-forever/` as the structured content database layer.
-- Added `data/wow-forever/entities.json` with the initial Forever entity registry and relationships.
-- Added `data/wow-forever/sources.json` with authoritative source references.
-- Added `data/wow-forever/README.md` with database rules and expansion strategy.
-- Added `professions.json` and the recipe schema seed.
-- Added `dungeons.json`, `bosses.json`, and `blueprints.json` as the Dungeon → Boss → Blueprint relationship layer.
+- Added `entities.json` with the initial Forever entity registry and relationships.
+- Added `sources.json` with authoritative source references.
+- Added `README.md` with database rules and expansion strategy.
+- Added `professions.json` and `recipes.json` schema/data seeds.
+- Added `dungeons.json`, `bosses.json`, `blueprints.json`, and `loot.json` as the Dungeon → Boss → Loot/Blueprint relationship layer.
+- Added `items.json` and `equipment.json` as the item-facing entity layers.
 - Added `content-index.json` as the central relationship/index contract for future crawlable entity pages.
+- Added `zones.json` with four source-backed Forever zone seeds: Zephras Isle, Riverglades, Mount Hyjal, and Shen'dralas.
+- Added `quests.json`, `npcs.json`, and `currencies.json` as the next population-ready entity layers.
 
 ## Current documentation source of truth
 - `PROJECT-CONTEXT.md` — durable project overview and continuation rules.
@@ -38,32 +41,37 @@ The site shell and World of Warcraft: Forever hub architecture are established. 
 - `data/wow-forever/content-index.json` — entity relationship/index contract.
 
 ## Current database scope
-The first seed covers the major announced Forever structure:
+The database now has schema coverage for the core content graph:
 - World of Warcraft: Forever version entity
 - Skyborne playable race
 - Camping, Professions, and Legacy systems
 - nine launch dungeons
 - two launch raids
 - Darkspear Islands battleground
-- initial profession registry and profession-specific campsite facts
-- recipe schema and profession relationships
-- dungeon/boss/Blueprint schema
-- central content relationship index
+- ten profession records and profession-specific campsite facts
+- recipes and Blueprints
+- dungeon bosses and loot relationships
+- items and equipment
+- zones, quests, NPCs, and currencies
 
-Blizzard confirms more than 600 new recipes, three campsite objects per profession, first campsite objects at profession skill 20, and advanced campsite objects coming from Blueprint recipes dropped by specific dungeon bosses. The individual Boss → Blueprint mappings still require source-backed research and are intentionally not fabricated.
+Blizzard currently confirms more than 600 new recipes, three campsite objects per profession, first campsite objects at profession skill 20, and advanced campsite objects coming from Blueprint recipes dropped by specific dungeon bosses. Blizzard also confirms four useful zone-level seeds now tracked in the database: Zephras Isle, Riverglades, Mount Hyjal, and Shen'dralas. citeturn1search0turn1search1
 
-Detailed items, equipment, recipes, bosses, loot, quests, NPCs, zones, and market entities remain to be populated from authoritative data as it becomes available.
+## Data integrity rules
+- Forever data is treated as its own dataset; Classic data is not silently copied into it.
+- Unknown values remain null, empty, partial, or pending.
+- Confirmed relationships carry source IDs.
+- Drop rates are not estimated.
+- Exact boss names, full loot tables, recipe lists, NPC coordinates, quest rewards, market prices, and other granular facts are only populated when individually source-backed.
 
-## Next priorities
-1. Research and populate confirmed Forever dungeon Boss entities from authoritative sources.
-2. Build verified Boss → Loot → Blueprint → Recipe relationships; leave unknown fields explicitly pending.
-3. Expand item/equipment schemas and stable entity IDs.
-4. Convert the most useful database entities into crawlable entity pages with stable URLs.
-5. Connect entity pages to the Forever hub, professions, items, equipment, guides, and market sections.
-6. Consolidate the canonical shell CSS into `styles.css` without changing the established visual result.
-7. Audit remaining pages for header/logo/width consistency.
-8. Add structured data where it accurately represents each page/entity.
-9. Keep sitemap and internal links synchronized as the database grows.
+## Next execution phase
+1. Continue source-backed research for the dungeon Boss → Loot → Blueprint → Recipe graph.
+2. Populate the highest-value confirmed item/equipment records and quest/zone records without importing unsupported Classic data.
+3. Build the first data-driven entity page template, starting with Dungeons & Raids and Professions.
+4. Connect entity cards and detail pages through the central content index.
+5. Add structured data and canonical metadata to entity pages.
+6. Generate/update sitemap entries as crawlable entity routes are introduced.
+7. Consolidate shared shell CSS only after verifying all existing pages remain visually identical.
+8. Audit the complete site for header, width, responsive, navigation, internal-link, and SEO consistency.
 
 ## Important constraint
 Do not redesign the site merely because a new page is being added. New work should extend the existing system unless a deliberate site-wide design change is requested. Do not invent missing game data; use explicit data-status fields and source references instead.

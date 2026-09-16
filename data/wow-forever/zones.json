@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "status_model": ["confirmed", "partial", "pending"],
+  "zones": [
+    {
+      "id": "zephras-isle",
+      "name": "Zephras Isle",
+      "type": "starting_zone",
+      "level_range": "1-12",
+      "faction": "neutral_starting_experience",
+      "status": "confirmed",
+      "source_ids": ["blizzard-forever-whats-next"],
+      "notes": "Skyborne starting experience with an elemental skybound theme."
+    },
+    {
+      "id": "riverglades",
+      "name": "Riverglades",
+      "type": "zone",
+      "level_range": "mid-30s to mid-40s",
+      "faction": "contested",
+      "status": "confirmed",
+      "source_ids": ["blizzard-forever-whats-next"],
+      "notes": "New frontier region with more than 150 new quests."
+    },
+    {
+      "id": "mount-hyjal",
+      "name": "Mount Hyjal",
+      "type": "zone",
+      "level_range": null,
+      "faction": "contested",
+      "status": "confirmed",
+      "source_ids": ["blizzard-forever-whats-next"],
+      "notes": "Expanded setting connected to the Hyjal Summit raid and new world content."
+    },
+    {
+      "id": "shendralas",
+      "name": "Shen'dralas",
+      "type": "zone",
+      "level_range": null,
+      "faction": "contested",
+      "status": "confirmed",
+      "source_ids": ["blizzard-forever-whats-next"],
+      "notes": "New adventure region tied to the Shen'dralar, Eldre'Thalas, Dire Maul, and centaur tribes."
+    }
+  ],
+  "record_schema": {
+    "id": "stable zone id",
+    "name": "display name",
+    "type": "zone | starting_zone | dungeon | raid | battleground | subzone | unknown",
+    "level_range": "display range or null",
+    "faction": "alliance | horde | contested | neutral | unknown",
+    "status": "confirmed | partial | pending",
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "Do not infer exact boundaries, coordinates, flight paths, quest counts, or spawn locations without a source.",
+    "Use separate dungeon and raid entities for instanced content even when the location is also represented as a zone."
+  ]
+}

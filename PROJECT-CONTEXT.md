@@ -31,6 +31,17 @@ AzerothMarket is a structured game-economy and virtual-asset information site. T
 ## Primary navigation
 Games · WoW Forever · News · Guides · Market · About Us · LIVE CHAT
 
+## Multilingual architecture
+AzerothMarket supports a global language layer across public HTML pages.
+- Default language: English (`en`).
+- Supported interface/content translation targets: Russian (`ru`), German (`de`), French (`fr`), Spanish (`es`), Portuguese (`pt`).
+- A language selector is injected globally before LIVE CHAT so the control remains part of the canonical header without changing page layouts.
+- Browser language is detected automatically when no language preference has been saved.
+- The selected language is persisted locally and applied across page navigation.
+- The current translation layer uses Google Translate client-side so every existing and future static HTML page can participate without duplicating the entire site immediately.
+- Long-term SEO localization should add real localized HTML URLs and `hreflang` annotations for high-value pages; client-side translation is the compatibility layer, not a substitute for source-authored localized content.
+- Game entity names, item names, boss names, profession names, and other proper nouns should remain faithful to established game terminology when localized.
+
 ## WoW Forever architecture
 Forever → Gold → Professions → Items → Equipment → Dungeons & Raids → Guides → Market
 
@@ -83,6 +94,7 @@ Avoid keyword stuffing, isolated pages, and duplicate content. Build entity rela
 - Production domain: `https://azerothmarket.com`
 - Worker domain: `https://azerothmarket.sennlyn.workers.dev/`
 - Wrangler assets directory is the repository root.
+- The Worker-first layer uses `HTMLRewriter` to inject the global language assets into HTML while leaving static assets served through the `ASSETS` binding.
 
 ## Working principle for future chats
 When asked to continue the project, first read this file, `PROJECT-STATUS.md`, `DESIGN-SYSTEM.md`, `SITE-ARCHITECTURE.md`, `SEO-GEO.md`, `CONTENT-RULES.md`, and `PAGE-TEMPLATE.md` as needed. Treat these files as the durable project source of truth and continue from the recorded status instead of asking the user to repeat the established design or architecture.

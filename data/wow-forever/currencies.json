@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "status_model": ["confirmed", "partial", "pending"],
+  "currencies": [],
+  "record_schema": {
+    "id": "stable currency id",
+    "name": "display name",
+    "type": "character | account | legacy | profession | event | unknown",
+    "scope": "character | account | ruleset | unknown",
+    "cap": null,
+    "source_type": "quest | challenge | activity | system | vendor | unknown",
+    "source_entity_ids": [],
+    "status": "confirmed | partial | pending",
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "Do not copy Classic currency behavior unless Forever explicitly confirms it.",
+    "Legacy Points are a confirmed Forever progression currency shared across eligible alts; exact UI and acquisition details should remain source-backed.",
+    "Unknown caps, conversion rules, and vendor uses remain null rather than estimated."
+  ]
+}

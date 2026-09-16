@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "npcs": [],
+  "record_schema": {
+    "id": "stable npc id",
+    "name": "display name",
+    "type": "quest_giver | trainer | vendor | profession | boss | camp | creature | other",
+    "zone_id": null,
+    "faction": "alliance | horde | neutral | unknown",
+    "services": [],
+    "quest_ids": [],
+    "profession_id": null,
+    "status": "confirmed | partial | pending",
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "NPC records should be added only when a Forever source identifies the NPC or its function.",
+    "Do not reuse Classic NPC coordinates or vendor inventories without Forever confirmation.",
+    "Profession and camping trainers are useful relationship nodes and should connect to profession and recipe entities when documented."
+  ]
+}

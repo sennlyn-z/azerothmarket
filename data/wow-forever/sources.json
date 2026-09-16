@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "id": "blizzard-forever-deep-dive",
+      "publisher": "Blizzard Entertainment",
+      "title": "World of Warcraft: Forever Deep Dive Panel Recap",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24303313",
+      "type": "official",
+      "used_for": ["professions", "camping", "itemization"]
+    },
+    {
+      "id": "blizzard-forever-whats-next",
+      "publisher": "Blizzard Entertainment",
+      "title": "World of Warcraft: Forever What's Next Panel Recap",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24303862/world-of-warcraft-forever-whats-next-panel-recap",
+      "type": "official",
+      "used_for": ["skyborne", "dungeons", "raids", "battleground", "classes"]
+    },
+    {
+      "id": "warcraft-forever-wiki-forever",
+      "publisher": "Warcraft Wiki",
+      "title": "World of Warcraft: Forever",
+      "url": "https://warcraft.wiki.gg/wiki/Forever",
+      "type": "community-reference",
+      "used_for": ["cross-checking"]
+    }
+  ]
+}

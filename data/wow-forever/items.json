@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "status_model": ["confirmed", "partial", "pending"],
+  "items": [],
+  "record_schema": {
+    "id": "stable item id",
+    "name": "display name",
+    "type": "equipment | consumable | reagent | quest | misc",
+    "quality": "poor | common | uncommon | rare | epic | legendary | unknown",
+    "item_level": null,
+    "required_level": null,
+    "bind_type": "unknown | bop | boe | soulbound",
+    "source_type": "dungeon | raid | quest | profession | world_drop | vendor | pvp | unknown",
+    "source_entity_ids": [],
+    "profession_id": null,
+    "recipe_id": null,
+    "equipment_id": null,
+    "status": "confirmed | partial | pending",
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "World of Warcraft: Forever itemization is distinct from existing Classic data and must be researched as Forever data.",
+    "Blizzard confirms every dungeon drop has been re-examined, hundreds of new drops have been added, unique dungeon boss items are blue quality, world-drop epics have been improved, and hundreds of new rare-creature drops have been added.",
+    "Do not copy Classic item stats, item levels, drop rates, or bind types unless Forever explicitly confirms them.",
+    "Every populated item should carry source_ids and a clear status."
+  ]
+}

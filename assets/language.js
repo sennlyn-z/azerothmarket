@@ -4,11 +4,14 @@
   const KEY='am-language';
   const normalize=(v)=>String(v||'').toLowerCase().split('-')[0];
   const browser=normalize((navigator.languages&&navigator.languages[0])||navigator.language||'en');
-  let current=localStorage.getItem(KEY)||'en';
-  if(!localStorage.getItem(KEY) && SUPPORTED.includes(browser) && browser!=='en') current=browser;
+  const stored=localStorage.getItem(KEY);
+  let current=stored||'en';
+  const autoSelected=!stored && SUPPORTED.includes(browser) && browser!=='en';
+  if(autoSelected) current=browser;
   document.documentElement.lang=current;
   function setCookie(name,value){document.cookie=name+'='+encodeURIComponent(value)+';path=/;max-age=31536000;SameSite=Lax'}
   function clearCookie(name){document.cookie=name+'=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT'}
+  if(autoSelected) setCookie('googtrans','/en/'+current);
   function apply(code,save){
     if(save)localStorage.setItem(KEY,code);
     document.documentElement.lang=code;

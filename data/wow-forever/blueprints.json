@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "game_version": "wow-forever",
+  "blueprints": [],
+  "relationship_schema": {
+    "id": "stable blueprint id",
+    "name": "Blueprint name",
+    "profession_id": "profession that uses the blueprint",
+    "boss_id": "boss that drops the blueprint",
+    "recipe_id": "recipe unlocked by the blueprint",
+    "camp_object": "optional campsite object id",
+    "status": "confirmed | partial | pending",
+    "source_ids": [],
+    "notes": "attributed notes only"
+  },
+  "data_rules": [
+    "Blizzard confirms that advanced campsite objects come from Blueprint recipes dropped by specific dungeon bosses, but individual boss-to-Blueprint mappings must be researched before entering them.",
+    "Do not infer a Blueprint source from a profession, dungeon, or boss name alone.",
+    "Do not populate recipe effects, skill requirements, materials, or drop rates without a source."
+  ]
+}

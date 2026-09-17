@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1",
+  "schema_version": "1.2",
   "game_version": "wow-forever",
   "purpose": "Central relationship index for crawlable AzerothMarket content entities.",
   "status_model": ["confirmed", "partial", "pending"],
@@ -30,7 +30,9 @@
     "Do not publish an empty or speculative Boss/Loot/Blueprint record as confirmed content.",
     "Unknown values remain null, empty, or pending rather than being inferred.",
     "Entity pages should link outward to related entities so the database becomes a navigable graph.",
-    "Zones, quests, NPCs, and currencies may be indexed before dedicated page templates exist; their canonical destination should remain stable."
+    "Zones, quests, NPCs, and currencies may be indexed before dedicated page templates exist; their canonical destination should remain stable.",
+    "Beta-era changes must be tracked against dated official sources and must not silently overwrite earlier confirmed facts.",
+    "Live-service observations from beta are provisional until corroborated or documented by an authoritative source."
   ],
   "current_verified_scope": {
     "dungeons": 9,
@@ -38,12 +40,22 @@
     "battlegrounds": 1,
     "professions": 10,
     "zones": 4,
+    "beta_status": "begins 2026-09-17",
+    "global_launch": "2026-11-04T15:00:00-07:00",
+    "first_raid_unlock": "2026-12-09",
     "confirmed_forever_profession_facts": [
       "more than 600 new recipes",
       "three campsite objects per profession",
       "first campsite objects at profession skill 20",
       "advanced campsite objects from Blueprint recipes dropped by specific dungeon bosses",
       "one-hour shared campsite-object cooldown"
+    ],
+    "itemization_facts": [
+      "every dungeon drop has been re-examined",
+      "hundreds of new dungeon drops are planned or added",
+      "unique dungeon boss items are blue quality",
+      "world-drop epics are improved",
+      "hundreds of new rare-creature drops are added"
     ],
     "boss_loot_blueprint_mapping": "pending_research",
     "quest_database": "schema_ready_population_pending",

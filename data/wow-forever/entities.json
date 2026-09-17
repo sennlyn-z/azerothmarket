@@ -1,130 +1,23 @@
 {
-  "schema_version": "1.0",
-  "game": {
-    "id": "wow",
-    "name": "World of Warcraft",
-    "versions": ["wow-forever"]
-  },
+  "schema_version": "1.1",
+  "game": {"id":"wow","name":"World of Warcraft","versions":["wow-forever"]},
   "version": {
-    "id": "wow-forever",
-    "name": "World of Warcraft: Forever",
-    "slug": "forever",
-    "level_cap": 60,
-    "level_cap_status": "confirmed",
-    "content_model": "horizontal",
-    "status": "announced",
-    "entities": {
-      "race": ["skyborne"],
-      "system": ["camping", "professions", "legacy"],
-      "profession": [
-        "alchemy",
-        "blacksmithing",
-        "enchanting",
-        "engineering",
-        "herbalism",
-        "leatherworking",
-        "mining",
-        "skinning",
-        "tailoring"
-      ],
-      "dungeon": [
-        "hall-of-thanes",
-        "ruins-of-lordaeron",
-        "whelgars-excavation",
-        "city-of-dalaran",
-        "blackmaw-hold",
-        "drowned-city",
-        "kroldok-stronghold",
-        "alcaz-prison",
-        "shapers-terrace"
-      ],
-      "raid": ["barrow-deeps", "hyjal-summit"],
-      "battleground": ["darkspear-islands"]
-    },
-    "sources": ["blizzard-forever-deep-dive", "blizzard-forever-whats-next"]
+    "id":"wow-forever","name":"World of Warcraft: Forever","slug":"forever","level_cap":60,"level_cap_status":"confirmed","content_model":"horizontal","status":"beta",
+    "beta_start":"2026-09-17","global_launch":"2026-11-04T15:00:00-07:00","first_raid_unlock":"2026-12-09",
+    "entities":{"race":["skyborne"],"system":["camping","professions","legacy","realmless","rulesets"],"profession":["alchemy","blacksmithing","enchanting","engineering","herbalism","leatherworking","mining","skinning","tailoring"],"dungeon":["hall-of-thanes","ruins-of-lordaeron","whelgars-excavation","city-of-dalaran","blackmaw-hold","drowned-city","kroldok-stronghold","alcaz-prison","shapers-terrace"],"raid":["barrow-deeps","hyjal-summit"],"battleground":["darkspear-islands"]},
+    "sources":["blizzard-forever-deep-dive","blizzard-forever-whats-next","blizzard-forever-found-photos"]
   },
-  "races": [
-    {
-      "id": "skyborne",
-      "name": "Skyborne",
-      "type": "playable-race",
-      "status": "confirmed",
-      "faction_choices": ["alliance", "horde"],
-      "starting_zone": "Zephras Isle",
-      "source_ids": ["blizzard-forever-whats-next"]
-    }
+  "races":[{"id":"skyborne","name":"Skyborne","type":"playable-race","status":"confirmed","faction_choices":["alliance","horde"],"starting_zone":"Zephras Isle","horde_classes":["shaman","warrior","hunter","rogue","druid"],"alliance_classes":["mage","warrior","hunter","rogue","druid"],"source_ids":["blizzard-forever-whats-next"]}],
+  "systems":[
+    {"id":"camping","name":"Camping","type":"system","status":"confirmed","summary":"Basic Campfires create campsites where players can rest, use services, receive useful benefits, and contribute crafted objects.","source_ids":["blizzard-forever-deep-dive"]},
+    {"id":"professions","name":"Professions","type":"system","status":"confirmed","summary":"Professions gain more than 600 new recipes, updated food, campsite objects, and advanced Blueprint recipes from dungeon bosses.","source_ids":["blizzard-forever-deep-dive"]},
+    {"id":"legacy","name":"Legacy","type":"system","status":"confirmed","summary":"Legacy Points are earned through Legacy Challenges and spent per character in Legacy Trees. Points are shared across alts, while each character spends them separately. At launch, a character can spend up to 16 points and players can earn up to 65 points for the initial reward track.","source_ids":["blizzard-forever-deep-dive"]},
+    {"id":"realmless","name":"Realmless structure","type":"infrastructure","status":"confirmed","summary":"Forever uses large ruleset-based ecosystems rather than traditional individual realms. Players select a ruleset and can group, dungeon, and raid with others in that same ruleset.","source_ids":["blizzard-forever-deep-dive"]},
+    {"id":"rulesets","name":"Rulesets","type":"infrastructure","status":"confirmed","summary":"Published rulesets are Normal, PvP, and Roleplaying, with Hardcore planned after launch. Cross-ruleset grouping is not supported and factions remain separate.","source_ids":["blizzard-forever-deep-dive"]}
   ],
-  "systems": [
-    {
-      "id": "camping",
-      "name": "Camping",
-      "type": "system",
-      "status": "confirmed",
-      "summary": "Basic Campfires create campsites where players can rest, use services, and contribute crafted objects that provide useful benefits.",
-      "source_ids": ["blizzard-forever-deep-dive"]
-    },
-    {
-      "id": "professions",
-      "name": "Professions",
-      "type": "system",
-      "status": "confirmed",
-      "summary": "Professions receive additional depth, including more than 600 new recipes across professions and level ranges, updated food, campsite objects, and advanced Blueprint recipes from dungeon bosses.",
-      "source_ids": ["blizzard-forever-deep-dive"]
-    },
-    {
-      "id": "legacy",
-      "name": "Legacy",
-      "type": "system",
-      "status": "partial",
-      "summary": "A progression system associated with repeat journeys and account-wide progression. Detailed data should be expanded only from authoritative published information.",
-      "source_ids": []
-    }
-  ],
-  "professions": [
-    {"id":"alchemy","name":"Alchemy","type":"primary","status":"seeded","source_ids":[]},
-    {"id":"blacksmithing","name":"Blacksmithing","type":"primary","status":"seeded","source_ids":["blizzard-forever-deep-dive"]},
-    {"id":"enchanting","name":"Enchanting","type":"primary","status":"seeded","source_ids":[]},
-    {"id":"engineering","name":"Engineering","type":"primary","status":"seeded","source_ids":[]},
-    {"id":"herbalism","name":"Herbalism","type":"gathering","status":"seeded","source_ids":["blizzard-forever-deep-dive"]},
-    {"id":"leatherworking","name":"Leatherworking","type":"primary","status":"seeded","source_ids":["blizzard-forever-deep-dive"]},
-    {"id":"mining","name":"Mining","type":"gathering","status":"seeded","source_ids":[]},
-    {"id":"skinning","name":"Skinning","type":"gathering","status":"seeded","source_ids":[]},
-    {"id":"tailoring","name":"Tailoring","type":"primary","status":"seeded","source_ids":["blizzard-forever-deep-dive"]}
-  ],
-  "dungeons": [
-    {"id":"hall-of-thanes","name":"Hall of Thanes","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"ruins-of-lordaeron","name":"Ruins of Lordaeron","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"whelgars-excavation","name":"Whelgar's Excavation","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"city-of-dalaran","name":"City of Dalaran","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"blackmaw-hold","name":"Blackmaw Hold","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"drowned-city","name":"Drowned City","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"kroldok-stronghold","name":"Krol'dok Stronghold","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"alcaz-prison","name":"Alcaz Prison","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"shapers-terrace","name":"Shaper's Terrace","status":"confirmed","source_ids":["blizzard-forever-whats-next"]}
-  ],
-  "raids": [
-    {"id":"barrow-deeps","name":"Barrow Deeps","size":10,"status":"confirmed","source_ids":["blizzard-forever-whats-next"]},
-    {"id":"hyjal-summit","name":"Hyjal Summit","size":20,"status":"confirmed","source_ids":["blizzard-forever-whats-next"]}
-  ],
-  "battlegrounds": [
-    {"id":"darkspear-islands","name":"Darkspear Islands","format":"15v15","status":"confirmed","source_ids":["blizzard-forever-whats-next"]}
-  ],
-  "relationships": [
-    {"from":"wow-forever","type":"HAS_SYSTEM","to":"camping"},
-    {"from":"wow-forever","type":"HAS_SYSTEM","to":"professions"},
-    {"from":"wow-forever","type":"HAS_SYSTEM","to":"legacy"},
-    {"from":"wow-forever","type":"HAS_RACE","to":"skyborne"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"hall-of-thanes"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"ruins-of-lordaeron"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"whelgars-excavation"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"city-of-dalaran"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"blackmaw-hold"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"drowned-city"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"kroldok-stronghold"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"alcaz-prison"},
-    {"from":"wow-forever","type":"HAS_DUNGEON","to":"shapers-terrace"},
-    {"from":"wow-forever","type":"HAS_RAID","to":"barrow-deeps"},
-    {"from":"wow-forever","type":"HAS_RAID","to":"hyjal-summit"},
-    {"from":"wow-forever","type":"HAS_BATTLEGROUND","to":"darkspear-islands"}
-  ]
+  "professions":[{"id":"alchemy","name":"Alchemy","type":"primary","status":"seeded","source_ids":[]},{"id":"blacksmithing","name":"Blacksmithing","type":"primary","status":"seeded","source_ids":["blizzard-forever-deep-dive"]},{"id":"enchanting","name":"Enchanting","type":"primary","status":"seeded","source_ids":[]},{"id":"engineering","name":"Engineering","type":"primary","status":"seeded","source_ids":[]},{"id":"herbalism","name":"Herbalism","type":"gathering","status":"seeded","source_ids":["blizzard-forever-deep-dive"]},{"id":"leatherworking","name":"Leatherworking","type":"primary","status":"seeded","source_ids":["blizzard-forever-deep-dive"]},{"id":"mining","name":"Mining","type":"gathering","status":"seeded","source_ids":[]},{"id":"skinning","name":"Skinning","type":"gathering","status":"seeded","source_ids":[]},{"id":"tailoring","name":"Tailoring","type":"primary","status":"seeded","source_ids":["blizzard-forever-deep-dive"]}],
+  "dungeons":[{"id":"hall-of-thanes","name":"Hall of Thanes","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"ruins-of-lordaeron","name":"Ruins of Lordaeron","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"whelgars-excavation","name":"Whelgar's Excavation","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"city-of-dalaran","name":"City of Dalaran","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"blackmaw-hold","name":"Blackmaw Hold","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"drowned-city","name":"Drowned City","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"kroldok-stronghold","name":"Krol'dok Stronghold","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"alcaz-prison","name":"Alcaz Prison","status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"shapers-terrace","name":"Shaper's Terrace","status":"confirmed","source_ids":["blizzard-forever-whats-next"]}],
+  "raids":[{"id":"barrow-deeps","name":"Barrow Deeps","size":10,"status":"confirmed","source_ids":["blizzard-forever-whats-next"]},{"id":"hyjal-summit","name":"Hyjal Summit","size":20,"status":"confirmed","source_ids":["blizzard-forever-whats-next"]}],
+  "battlegrounds":[{"id":"darkspear-islands","name":"Darkspear Islands","format":"15v15","status":"confirmed","source_ids":["blizzard-forever-whats-next"]}],
+  "relationships":[{"from":"wow-forever","type":"HAS_SYSTEM","to":"camping"},{"from":"wow-forever","type":"HAS_SYSTEM","to":"professions"},{"from":"wow-forever","type":"HAS_SYSTEM","to":"legacy"},{"from":"wow-forever","type":"HAS_SYSTEM","to":"realmless"},{"from":"wow-forever","type":"HAS_SYSTEM","to":"rulesets"},{"from":"wow-forever","type":"HAS_RACE","to":"skyborne"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"hall-of-thanes"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"ruins-of-lordaeron"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"whelgars-excavation"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"city-of-dalaran"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"blackmaw-hold"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"drowned-city"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"kroldok-stronghold"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"alcaz-prison"},{"from":"wow-forever","type":"HAS_DUNGEON","to":"shapers-terrace"},{"from":"wow-forever","type":"HAS_RAID","to":"barrow-deeps"},{"from":"wow-forever","type":"HAS_RAID","to":"hyjal-summit"},{"from":"wow-forever","type":"HAS_BATTLEGROUND","to":"darkspear-islands"}]
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "game_version": "wow-forever",
   "status_model": ["confirmed", "partial", "pending"],
   "zones": [
@@ -10,8 +10,11 @@
       "level_range": "1-12",
       "faction": "neutral_starting_experience",
       "status": "confirmed",
-      "source_ids": ["blizzard-forever-whats-next"],
-      "notes": "Skyborne starting experience with an elemental skybound theme."
+      "source_ids": ["blizzard-forever-whats-next", "blizzard-forever-found-photos"],
+      "notes": "Skyborne starting experience with an elemental skybound theme. Official material identifies Windshapers, the High Order, and the Al'aketh as groups involved in the island's crisis; exact NPC records remain pending.",
+      "content_hooks": ["skyborne_starting_experience", "elemental_story", "windshapers", "high_order", "al_aketh", "profession_hooks", "new_quests"],
+      "quest_coverage": {"status": "partial", "known_scope": "Levels 1-12 starting experience with new quests; exact quest records pending."},
+      "npc_coverage": {"status": "partial", "known_scope": "New NPCs and faction/story groups are confirmed; individual NPC identities and functions require source-backed records."}
     },
     {
       "id": "riverglades",
@@ -20,8 +23,11 @@
       "level_range": "mid-30s to mid-40s",
       "faction": "contested",
       "status": "confirmed",
-      "source_ids": ["blizzard-forever-whats-next"],
-      "notes": "New frontier region with more than 150 new quests."
+      "source_ids": ["blizzard-forever-whats-next", "blizzard-forever-found-photos"],
+      "notes": "New frontier region linked to surrounding regions. Official material describes Powderfuse Port, Gnoll camps, Ogre threats, Powderfuse Goblins, Twilight's Hammer, and Brotherhood of the Horse.",
+      "content_hooks": ["frontier", "powderfuse-port", "gnoll-camps", "ogre-threats", "powderfuse-goblins", "twilights-hammer", "brotherhood-of-the-horse", "trade-routes", "new_quests"],
+      "quest_coverage": {"status": "confirmed_scope", "known_scope": "More than 150 new quests in the mid-30s to mid-40s journey; exact quest-by-quest records pending."},
+      "npc_coverage": {"status": "partial", "known_scope": "Named groups and Powderfuse Port are source-backed; individual NPC names, types, and quest relationships pending."}
     },
     {
       "id": "mount-hyjal",
@@ -30,8 +36,11 @@
       "level_range": null,
       "faction": "contested",
       "status": "confirmed",
-      "source_ids": ["blizzard-forever-whats-next"],
-      "notes": "Expanded setting connected to the Hyjal Summit raid and new world content."
+      "source_ids": ["blizzard-forever-whats-next", "blizzard-forever-found-photos"],
+      "notes": "Expanded setting following the Battle of Mount Hyjal. Official material describes Darkwhisper Gorge, emerging factions, new alliances, and world content; exact zone level band and NPC roster remain pending.",
+      "content_hooks": ["battleaftermath", "darkwhisper-gorge", "emerging-factions", "alliances", "world-content", "hyjal-summit-context"],
+      "quest_coverage": {"status": "partial", "known_scope": "New story and quests are confirmed within the broader level 1-60 expansion; exact quest records pending."},
+      "npc_coverage": {"status": "pending", "known_scope": "Faction and character details require individual source-backed NPC records."}
     },
     {
       "id": "shendralas",
@@ -40,8 +49,11 @@
       "level_range": null,
       "faction": "contested",
       "status": "confirmed",
-      "source_ids": ["blizzard-forever-whats-next"],
-      "notes": "New adventure region tied to the Shen'dralar, Eldre'Thalas, Dire Maul, and centaur tribes."
+      "source_ids": ["blizzard-forever-whats-next", "blizzard-forever-found-photos"],
+      "notes": "New adventure region south of Desolace, tied to the Shen'dralar, Eldre'Thalas, Dire Maul, and centaur tribes.",
+      "content_hooks": ["shendralar", "eldrethalas", "dire-maul", "centaur-tribes", "new-adventure", "desolace-expansion"],
+      "quest_coverage": {"status": "partial", "known_scope": "New quests and story content are confirmed; exact quest records pending."},
+      "npc_coverage": {"status": "pending", "known_scope": "Individual NPC identities and relationships require source-backed records."}
     }
   ],
   "record_schema": {
@@ -52,10 +64,14 @@
     "faction": "alliance | horde | contested | neutral | unknown",
     "status": "confirmed | partial | pending",
     "source_ids": [],
-    "notes": "attributed notes only"
+    "notes": "attributed notes only",
+    "content_hooks": "source-backed topics, factions, locations, or systems associated with the zone",
+    "quest_coverage": "aggregate coverage status; not a substitute for individual quest records",
+    "npc_coverage": "aggregate coverage status; not a substitute for individual NPC records"
   },
   "data_rules": [
-    "Do not infer exact boundaries, coordinates, flight paths, quest counts, or spawn locations without a source.",
-    "Use separate dungeon and raid entities for instanced content even when the location is also represented as a zone."
+    "Do not infer exact boundaries, coordinates, flight paths, quest IDs, quest rewards, or spawn locations without a source.",
+    "Use separate dungeon and raid entities for instanced content even when the location is also represented as a zone.",
+    "Aggregate coverage fields describe research scope and must not be presented as individual quest or NPC records."
   ]
 }

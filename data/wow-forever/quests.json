@@ -1,7 +1,57 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "game_version": "wow-forever",
   "quests": [],
+  "coverage": [
+    {
+      "id": "riverglades-new-quest-scope",
+      "type": "coverage",
+      "zone_id": "riverglades",
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-whats-next", "blizzard-forever-found-photos"],
+      "summary": "Riverglades contains more than 150 new quests spanning much of the mid-30s to mid-40s experience range. Individual quest names, IDs, objectives, rewards, and NPC relationships are not yet populated."
+    },
+    {
+      "id": "level-1-60-new-quest-scope",
+      "type": "coverage",
+      "zone_id": null,
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-whats-next", "blizzard-forever-found-photos"],
+      "summary": "Blizzard describes more than 1,000 new quests woven throughout the level 1-60 journey, including additions to starting zones and new regions."
+    },
+    {
+      "id": "starting-zones-new-quest-scope",
+      "type": "coverage",
+      "zone_id": null,
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos"],
+      "summary": "Official material confirms new NPCs, quests, profession hooks, recipes, and smaller story moments across starting-zone experiences. Individual quest records remain pending."
+    },
+    {
+      "id": "wetlands-new-quest-scope",
+      "type": "coverage",
+      "zone_id": null,
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos"],
+      "summary": "Wetlands receives new quests and additional opportunities to develop existing characters and stories. Exact quest records remain pending."
+    },
+    {
+      "id": "desolace-centaur-quest-scope",
+      "type": "coverage",
+      "zone_id": "shendralas",
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos"],
+      "summary": "The Desolace centaur faction questlines are expanded with new content and rewards, while Shen'dralas adds a new area tied to Eldre'Thalas. Individual records remain pending."
+    },
+    {
+      "id": "forsaken-paladin-story-scope",
+      "type": "coverage",
+      "zone_id": null,
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos"],
+      "summary": "Forsaken Paladin content includes a story rooted in Tirisfal Glades and a level-60 personal quest for an epic mount. Individual quest names, IDs, objectives, rewards, and NPC relationships require separate source support."
+    }
+  ],
   "record_schema": {
     "id": "stable quest id",
     "name": "display name",
@@ -16,9 +66,18 @@
     "source_ids": [],
     "notes": "attributed notes only"
   },
+  "coverage_schema": {
+    "id": "stable coverage scope id, not an individual quest id",
+    "type": "coverage",
+    "zone_id": "optional related zone id",
+    "status": "confirmed_scope | partial | pending",
+    "source_ids": [],
+    "summary": "source-backed aggregate quest coverage"
+  },
   "data_rules": [
     "Forever quest records must be researched as Forever content and must not silently inherit Classic quest rewards or coordinates.",
-    "Blizzard confirms more than 150 new quests in Riverglades and additional quests throughout the level 1-60 journey; exact quest records require individual source support.",
-    "Do not invent quest IDs, objectives, rewards, NPC locations, or level requirements."
+    "Aggregate coverage records may document confirmed scope before individual quests are verified.",
+    "Do not invent quest IDs, objectives, rewards, NPC locations, or level requirements.",
+    "When individual quests are added, connect them to zone_id, giver_npc_id, reward_item_ids, reward_currency_ids, and source_ids whenever the source supports those relationships."
   ]
 }

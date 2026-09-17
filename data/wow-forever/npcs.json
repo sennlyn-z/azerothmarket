@@ -1,7 +1,54 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "game_version": "wow-forever",
   "npcs": [],
+  "coverage": [
+    {
+      "id": "zephras-story-groups",
+      "type": "group_coverage",
+      "zone_id": "zephras-isle",
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos", "blizzard-forever-whats-next"],
+      "named_groups": ["Windshapers", "High Order", "Al'aketh"],
+      "summary": "Official material identifies these groups as central to the Zephras Isle crisis. They are tracked here as source-backed story groups, not individual NPC records."
+    },
+    {
+      "id": "riverglades-story-groups",
+      "type": "group_coverage",
+      "zone_id": "riverglades",
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos"],
+      "named_groups": ["Powderfuse Goblins", "Twilight's Hammer", "Brotherhood of the Horse"],
+      "summary": "Official material identifies these groups in Riverglades alongside Gnoll camps and Ogre threats. Individual NPC identities and functions remain pending."
+    },
+    {
+      "id": "riverglades-location-nodes",
+      "type": "location_coverage",
+      "zone_id": "riverglades",
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos"],
+      "named_locations": ["Powderfuse Port"],
+      "summary": "Powderfuse Port is identified as Riverglades' port and a destination for the new Steamwheedle Cartel sea route. The port is a location node, not an NPC record."
+    },
+    {
+      "id": "mount-hyjal-story-scope",
+      "type": "story_coverage",
+      "zone_id": "mount-hyjal",
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos", "blizzard-forever-whats-next"],
+      "named_groups": [],
+      "summary": "Official material confirms emerging factions, alliances, and story development following the Battle for Mount Hyjal, but does not yet provide enough individual NPC detail for a reliable roster."
+    },
+    {
+      "id": "forsaken-paladin-npc-scope",
+      "type": "story_coverage",
+      "zone_id": null,
+      "status": "confirmed_scope",
+      "source_ids": ["blizzard-forever-found-photos"],
+      "named_locations": ["Bandarion Keep"],
+      "summary": "Bandarion Keep in the Whispering Wood of Tirisfal Glades is identified as a key location for the Forsaken Paladin story. Individual NPC records are still pending."
+    }
+  ],
   "record_schema": {
     "id": "stable npc id",
     "name": "display name",
@@ -15,9 +62,20 @@
     "source_ids": [],
     "notes": "attributed notes only"
   },
+  "coverage_schema": {
+    "id": "stable research-scope id, not an individual NPC id",
+    "type": "group_coverage | location_coverage | story_coverage",
+    "zone_id": "optional related zone id",
+    "status": "confirmed_scope | partial | pending",
+    "source_ids": [],
+    "named_groups": "optional source-backed faction or organization names",
+    "named_locations": "optional source-backed location names",
+    "summary": "source-backed aggregate NPC/story coverage"
+  },
   "data_rules": [
     "NPC records should be added only when a Forever source identifies the NPC or its function.",
     "Do not reuse Classic NPC coordinates or vendor inventories without Forever confirmation.",
+    "Coverage records may track named factions, organizations, and locations without pretending they are individual NPCs.",
     "Profession and camping trainers are useful relationship nodes and should connect to profession and recipe entities when documented."
   ]
 }

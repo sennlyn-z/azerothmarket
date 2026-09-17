@@ -14,7 +14,23 @@
       "title": "World of Warcraft: Forever What's Next Panel Recap",
       "url": "https://worldofwarcraft.blizzard.com/en-us/news/24303862/world-of-warcraft-forever-whats-next-panel-recap",
       "type": "official",
-      "used_for": ["skyborne", "dungeons", "raids", "battleground", "classes"]
+      "used_for": ["skyborne", "dungeons", "raids", "battleground", "classes", "roadmap"]
+    },
+    {
+      "id": "blizzard-forever-found-photos",
+      "publisher": "Blizzard Entertainment",
+      "title": "World of Warcraft: Forever Found Photos Panel Recap",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24304071",
+      "type": "official",
+      "used_for": ["zones", "quests", "world-content", "skyborne"]
+    },
+    {
+      "id": "blizzard-forever-live-qa",
+      "publisher": "Blizzard Entertainment",
+      "title": "Watch the World of Warcraft Live Q&A September 17",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24302544",
+      "type": "official",
+      "used_for": ["beta", "live-qa", "post-blizzcon-updates"]
     },
     {
       "id": "warcraft-forever-wiki-forever",

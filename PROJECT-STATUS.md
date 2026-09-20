@@ -1,6 +1,6 @@
 # AzerothMarket — Project Status
 
-_Last updated: 2026-09-16_
+_Last updated: 2026-09-20_
 
 ## Current state
 The site shell and World of Warcraft: Forever hub architecture are established. Production is deployed through GitHub → Cloudflare Workers. The structured WoW Forever content database is now in place as a scalable entity/relationship layer. A global multilingual shell is also in place for English, Russian, German, French, Spanish, and Portuguese.
@@ -32,6 +32,9 @@ The site shell and World of Warcraft: Forever hub architecture are established. 
 - Added automatic browser-language detection and saved language preference.
 - Added Cloudflare Worker-first HTML injection so the language selector is available across existing and future HTML pages without duplicating page templates.
 - Added multilingual SEO rules for the future rollout of source-authored localized URLs and `hreflang` annotations.
+- Added a top-level `/guilds/` community directory for WoW Forever guild discovery, with dated region/faction/playstyle filters and source links to public recruitment posts.
+- Added current September 2026 beta news coverage for the beta launch and Blizzard's known-issues update.
+- Updated homepage discovery and sitemap to include Guilds and the newest beta news routes.
 
 ## Current documentation source of truth
 - `PROJECT-CONTEXT.md` — durable project overview and continuation rules.
@@ -70,15 +73,16 @@ Blizzard confirms more than 600 new recipes, three campsite objects per professi
 - Exact boss names, full loot tables, recipe lists, NPC coordinates, quest rewards, market prices, and other granular facts are only populated when individually source-backed.
 
 ## Next execution phase
-1. Continue source-backed research for the dungeon Boss → Loot → Blueprint → Recipe graph.
-2. Populate the highest-value confirmed item/equipment records and quest/zone records without importing unsupported Classic data.
-3. Build the first data-driven entity page template, starting with Dungeons & Raids and Professions.
-4. Connect entity cards and detail pages through the central content index.
-5. Add structured data and canonical metadata to entity pages.
-6. Begin source-authored localized HTML versions for the highest-value pages, starting with the homepage, WoW Forever hub, About Us, Dungeons & Raids hub, and Professions hub; connect equivalents with `hreflang`.
-7. Generate/update sitemap entries as crawlable entity and localized routes are introduced.
-8. Consolidate shared shell CSS only after verifying all existing pages remain visually identical.
-9. Audit the complete site for header, width, responsive, navigation, internal-link, language, and SEO consistency.
+1. Keep the WoW Forever News and Guilds sections current as beta information and community recruitment change.
+2. Continue source-backed research for the dungeon Boss → Loot → Blueprint → Recipe graph.
+3. Populate the highest-value confirmed item/equipment records and quest/zone records without importing unsupported Classic data.
+4. Build the first data-driven entity page template, starting with Dungeons & Raids and Professions.
+5. Connect entity cards and detail pages through the central content index.
+6. Add structured data and canonical metadata to entity pages.
+7. Begin source-authored localized HTML versions for the highest-value pages, starting with the homepage, WoW Forever hub, About Us, Dungeons & Raids hub, and Professions hub; connect equivalents with `hreflang`.
+8. Generate/update sitemap entries as crawlable entity and localized routes are introduced.
+9. Consolidate shared shell CSS only after verifying all existing pages remain visually identical.
+10. Audit the complete site for header, width, responsive, navigation, internal-link, language, and SEO consistency.
 
 ## Important constraint
 Do not redesign the site merely because a new page is being added. New work should extend the existing system unless a deliberate site-wide design change is requested. Do not invent missing game data; use explicit data-status fields and source references instead.
